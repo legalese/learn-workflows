@@ -40,4 +40,3 @@ jobs:
           uname -a
           diskutil list
           df -h
-          free
