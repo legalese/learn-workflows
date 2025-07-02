@@ -15,4 +15,14 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Explore the Ubuntu instance
+        run: |
+          ls /
+          df -h
+          lsblk
+          uname -a
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Do-Nothing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "NOOP FTW!"
